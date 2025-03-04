@@ -13,10 +13,10 @@
         <form  class="form" action="">
             <label for="">Introduce aquí tu número</label>
             <input type="number" class="js-inputText" type="text">
-            <button class="submit js-buttonSubmit" type="submit">Prueba</button>
+            <button id="counter-label" onclick="incrementClick()" class="submit js-buttonSubmit" type="submit">Prueba</button>
         </form>
         <p class="text js-txtAnswer">Pista: Escribe el número y dale a Prueba</p>
-        <p class="text js-txtNumberAttempts">Número de intentos:0</p>
+        <p  id="txtNumber" class="text js-txtNumberAttempts">Número de intentos:0</p>
     </main>
     
     <script type="text/javascript" src="./js/main.js"></script>
