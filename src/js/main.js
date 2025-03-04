@@ -34,10 +34,10 @@ const handleClick = (ev) => {
         txtAnswer.innerHTML = "Enhorabuena campeona!!";
     }
     else if (parseInt(inputText.value) < randomNumber) {
-        txtAnswer.innterHTML = "Demasiado bajo";
+        txtAnswer.innerHTML = "Demasiado bajo";
     }
     else if (parseInt(inputText.value) > randomNumber) {
-        txtAnswer.innterHTML = "Demasiado alto";
+        txtAnswer.innerHTML = "Demasiado alto";
     }
 }
 
