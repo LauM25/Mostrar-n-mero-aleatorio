@@ -26,6 +26,17 @@ function getRandomNumber(max) {
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber)
 
+var counterVal = 0;
+
+function incrementClick() {
+    updateDisplay(++counterVal);
+}
+
+
+function updateDisplay(val) {
+    document.getElementById('txtNumber').innerHTML = val;
+}
+
 
 const handleClick = (ev) => {
     ev.preventDefault();
@@ -41,4 +52,4 @@ const handleClick = (ev) => {
     }
 }
 
-buttonSubmit.addEventListener("click", handleClick);
+buttonSubmit.addEventListener("click", handleClick, updateDisplay);
