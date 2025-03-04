@@ -35,15 +35,15 @@ const handleClick = (ev) => {
     ev.preventDefault();
     const inputNumberValue = parseInt(inputNumber.value);
     if (inputNumberValue < 1 || inputNumberValue > 100 || !inputNumber) {
-        txtAnswer.innerHTML = "El número debe de ser entre 1 y 100";
+        txtAnswer.innerHTML = "Pista: El número debe de ser entre 1 y 100";
     } else if (inputNumberValue === randomNumber) {
         txtAnswer.innerHTML = "Enhorabuena campeona!!";
     }
     else if (inputNumberValue < randomNumber) {
-        txtAnswer.innerHTML = "Demasiado bajo";
+        txtAnswer.innerHTML = "Pista: Demasiado bajo";
     }
     else if (inputNumberValue > randomNumber) {
-        txtAnswer.innerHTML = "Demasiado alto";
+        txtAnswer.innerHTML = "Pista: Demasiado alto";
     }
     attemps += 1;
     txtNumber.innerHTML = attemps;

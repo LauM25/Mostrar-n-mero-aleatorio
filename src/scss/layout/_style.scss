@@ -6,9 +6,17 @@ main{
     align-items: center;
     gap:60px;
     height: 100vh;
+    margin: 15px;
+    background-image:url('../images/burbujas.jpg')
 }
 .title{
-    color: aqua;
+    color: grey;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 36;
+
 }
 .form{
     display: flex;
@@ -16,16 +24,64 @@ main{
     gap: 20px;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
+.form label,input{
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    border-color:#B9F4FC;
+    font-size: 18px;
+    color:grey;
+    text-align: center;
+    &:focus {
+        box-shadow: inset 1px 1px 1px grey;
+        outline: none;
+        border-color:#B9E3FC ;
+      }
+}
+
 .text{
     color: grey;
     font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
 }
 .submit{
     margin-top: 50px;
     padding: 10px;
-    background-color: aqua;
+    background-color: #B9F4FC;
     border: none;
     border-radius: 5px;
     font-size: 18px;
+    color: white;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgb(213, 212, 212);
+    
+
+    &:hover{
+        background-color: #B9E3FC;
+    }
+}
+
+button:focus {
+    outline: none;
+}
+
+.span{
+    color:white;
+    border-radius:5px;
+    padding: 10px;
+    background-color: grey;
 }
