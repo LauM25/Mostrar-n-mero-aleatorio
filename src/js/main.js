@@ -15,7 +15,7 @@ Cuando la usuaria haga click
     -si el valor es igual : Has ganado campeona!!!
     -si el valor no es entre 1 y 100 : El número debe estar entre 1 y 100.
 */
-const inputText = document.querySelector(".js-inputText");
+const inputNumber = document.querySelector(".js-inputNumber");
 const buttonSubmit = document.querySelector(".js-buttonSubmit");
 const txtAnswer = document.querySelector(".js-txtAnswer");
 const txtNumber = document.querySelector(".js-txtNumberAttempts");
@@ -26,30 +26,27 @@ function getRandomNumber(max) {
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber)
 
-var counterVal = 0;
-
-function incrementClick() {
-    updateDisplay(++counterVal);
-}
+let attemps = 0;
 
 
-function updateDisplay(val) {
-    document.getElementById('txtNumber').innerHTML = val;
-}
 
 
 const handleClick = (ev) => {
     ev.preventDefault();
-    txtNumber.innterHTML = buttonSubmit.lenght;
-    if (parseInt(inputText.value) === randomNumber) {
+    const inputNumberValue = parseInt(inputNumber.value);
+    if (inputNumberValue < 1 || inputNumberValue > 100 || !inputNumber) {
+        txtAnswer.innerHTML = "El número debe de ser entre 1 y 100";
+    } else if (inputNumberValue === randomNumber) {
         txtAnswer.innerHTML = "Enhorabuena campeona!!";
     }
-    else if (parseInt(inputText.value) < randomNumber) {
+    else if (inputNumberValue < randomNumber) {
         txtAnswer.innerHTML = "Demasiado bajo";
     }
-    else if (parseInt(inputText.value) > randomNumber) {
+    else if (inputNumberValue > randomNumber) {
         txtAnswer.innerHTML = "Demasiado alto";
     }
+    attemps += 1;
+    txtNumber.innerHTML = attemps;
 }
 
-buttonSubmit.addEventListener("click", handleClick, updateDisplay);
+buttonSubmit.addEventListener("click", handleClick);
